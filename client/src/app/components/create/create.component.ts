@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-create-modal',
+  selector: 'app-create',
   imports: [],
-  templateUrl: './create-modal.component.html',
-  styleUrl: './create-modal.component.scss'
+  templateUrl: './create.component.html',
+  styleUrl: './create.component.scss'
 })
-export class CreateModalComponent {
+export class CreateComponent {
   @Output() createTweet: EventEmitter<string> = new EventEmitter<string>();
   @Output() writingMessage: EventEmitter<string> = new EventEmitter<string>();
   message: string = '';

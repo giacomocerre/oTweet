@@ -3,14 +3,14 @@ import { Router } from '@angular/router';
 import { TweetService } from '../../services/tweet/tweet.service';
 import { UserService } from '../../services/user/user.service';
 import { Tweet } from '../../types/tweet';
+import { TweetComponent } from '../../components/tweet/tweet.component';
+import { CreateComponent } from '../../components/create/create.component';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
-import { TweetComponent } from '../../components/tweet/tweet.component';
-import { CreateModalComponent } from '../../components/create-modal/create-modal.component';
 
 @Component({
   selector: 'app-tweetspage',
-  imports: [CommonModule, TweetComponent, CreateModalComponent],
+  imports: [CommonModule, TweetComponent, CreateComponent],
   templateUrl: './tweetspage.component.html',
   styleUrl: './tweetspage.component.scss',
 })

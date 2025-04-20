@@ -2,7 +2,7 @@
     <h1>Ciao, {{ author }}!</h1>
   
     <div>
-      <app-create-modal (createTweet)="onCreateTweet($event)" (writingMessage)="onWriteMessage($event)"></app-create-modal>
+      <app-create (createTweet)="onCreateTweet($event)" (writingMessage)="onWriteMessage($event)" ></app-create>
       <p *ngIf="error" class="status-message-error">Per favore inserisci un messaggio.</p>
     </div>
   
