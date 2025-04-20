@@ -9,9 +9,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class CreateModalComponent {
   @Output() createTweet: EventEmitter<string> = new EventEmitter<string>();
   @Output() writingMessage: EventEmitter<string> = new EventEmitter<string>();
+  message: string = '';
 
   onCreate(message: string) {
     this.createTweet.emit(message);
+    this.message = '';
   }
 
   onWrite(message: string) {
