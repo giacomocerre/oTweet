@@ -1,0 +1,5 @@
+<div class="create-tweet-form">
+    <input type="text" placeholder="A cosa pensi..." #message (input)="onWrite(message.value)"/>
+    <button (click)="onCreate(message.value)">Crea</button>
+  </div>
+  

@@ -1,0 +1,47 @@
+@use "../../../../src/styles/variables" as *;
+
+.container {
+  font-family: $base-font;
+  background-color: $background-color;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: $box-shadow;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  app-create-modal {
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .tweets-container {
+    app-tweet {
+      display: block;
+      margin-bottom: 1.5rem;
+      background-color: $card-background;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+  }
+
+  .status-message {
+    text-align: center;
+    font-size: 1rem;
+    color: $secondary-color;
+    margin-top: 2rem;
+  }
+
+  .status-message-error {
+    color: red;
+    padding: 0;
+    margin: 0;
+  }
+}

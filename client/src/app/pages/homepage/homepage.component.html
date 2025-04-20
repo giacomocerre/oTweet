@@ -1,0 +1,16 @@
+<div class="homepage">
+    <h1 class="homepage__title">Benvenuto in <span>OTweet</span>!</h1>
+  
+    <div class="homepage__form">
+      <input
+        type="text"
+        placeholder="Come ti chiami?"
+        #name
+        class="homepage__input"
+      />
+      <button (click)="onEnter(name.value)" class="homepage__button">Entra</button>
+    </div>
+  
+    <p *ngIf="error" class="homepage__error">Per favore inserisci il tuo nome.</p>
+  </div>
+  

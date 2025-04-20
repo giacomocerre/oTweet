@@ -1,0 +1,15 @@
+<div class="tweet-card">
+    <div class="tweet-header">
+      <div class="avatar">
+        <img [src]="'https://avatar.iran.liara.run/public/boy?username=' + tweet.author" [alt]="tweet.author" />
+      </div>
+      <div class="author-info">
+        <p class="author-name">{{ tweet.author }}</p>
+        <p class="tweet-date">{{ tweet.date }}</p>
+      </div>
+    </div>
+    <div class="tweet-body">
+      <p class="tweet-message">{{ tweet.message }}</p>
+    </div>
+  </div>
+  

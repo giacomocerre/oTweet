@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Ciao, {{ author }}!</h1>
+  
+    <div>
+      <app-create-modal (createTweet)="onCreateTweet($event)" (writingMessage)="onWriteMessage($event)"></app-create-modal>
+      <p *ngIf="error" class="status-message-error">Per favore inserisci un messaggio.</p>
+    </div>
+  
+    <h1>Ecco la lista dei tweet recenti:</h1>
+    <div *ngIf="tweets$ | async as tweets; else loading">
+      <div *ngIf="tweets.length > 0; else noTweets" class="tweets-container">
+        <div *ngFor="let tweet of tweets">
+          <app-tweet [tweet]="tweet"></app-tweet>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #loading>
+    <p class="status-message">Caricamento tweet...</p>
+  </ng-template>
+  
+  <ng-template #noTweets>
+    <p class="status-message">Nessun tweet trovato.</p>
+  </ng-template>
+  
